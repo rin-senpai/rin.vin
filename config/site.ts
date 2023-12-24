@@ -6,10 +6,6 @@ export const siteConfig = {
     "Seggs",
   mainNav: [
     {
-      title: "What",
-      href: "/",
-    },
-    {
       title: "Seggsering",
       href: "/seggs",
     },

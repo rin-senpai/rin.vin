@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/site"
-import { MainNav } from "@/components/main-nav"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { MainNav } from "@/components/ui/main-nav"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
 
 export function SiteHeader() {
   return (
