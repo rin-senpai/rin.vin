@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from 'next/image'
 
-import { Apple, Github, Globe } from "lucide-react"
+import { Gift, Apple, Github, Globe } from "lucide-react"
 
 import { Button, buttonVariants } from "@/components/ui/button"
 import {
@@ -18,27 +18,27 @@ export default function IndexPage() {
     <div>
       <section className="container grid max-w-[980px] items-center gap-6 pb-8 pt-6 md:py-10">
         <div className="flex max-w-[980px] flex-col items-center gap-8 md:flex-row md:items-end md:gap-2">
-          <div className="flex max-w-[980px] flex-col items-start gap-6">
+          <div className="flex max-w-[980px] flex-col items-center md:items-start gap-6">
             <div className="flex max-w-[980px] flex-col gap-2">
-              <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-5xl">
+              <h1 className="text-center md:text-left text-3xl font-extrabold leading-tight tracking-tighter md:text-5xl">
                 High Quality Software... Unfinished
               </h1>
-              <p className="max-w-[700px] text-lg text-muted-foreground">
+              <p className="text-center md:text-left max-w-[700px] text-lg text-muted-foreground">
                 I&apos;m a developer... I think... I hope
               </p>
             </div>
             <div className="flex gap-4">
               <Link
-                href="/seggs"
+                href="https://ko-fi.com/voxeldev"
                 className={buttonVariants({variant: "default"})}
               >
-                My Stuff
+                <Gift className="mr-2 h-4 w-4" /> Invest
               </Link>
               <Link
-                href="/uoh"
+                href="https://grabify.link/K11H21"
                 className={buttonVariants({variant: "outline"})}
               >
-                About Me
+                Your IP
               </Link>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function IndexPage() {
         </div>
       </section>
       <section className="container grid max-w-[980px] items-center gap-6 pb-8 pt-6 md:py-10">
-        <h2 className="text-xl font-extrabold leading-tight tracking-tighter md:text-3xl">
+        <h2 className="text-center md:text-left text-xl font-extrabold leading-tight tracking-tighter md:text-3xl">
           My Stuff
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -137,6 +137,14 @@ export default function IndexPage() {
               </CardFooter>
           </Card>
         </div>
+      </section>
+      <section className="container grid max-w-[980px] items-center gap-6 pb-8 pt-6 md:py-10">
+        <h2 className="text-center md:text-left text-xl font-extrabold leading-tight tracking-tighter md:text-3xl">
+          So Where Find Me????
+        </h2>
+        <p>
+          your walls
+        </p>
       </section>
     </div>
   )
