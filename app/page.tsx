@@ -11,7 +11,7 @@ export default function IndexPage() {
           High Quality Software... Unfinished
         </h1>
         <p className="max-w-[700px] text-lg text-muted-foreground">
-          I'm a developer... I think
+            I&apos;m a developer... I think
         </p>
       </div>
       <div className="flex gap-4">
