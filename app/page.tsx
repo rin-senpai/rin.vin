@@ -20,11 +20,14 @@ export default function IndexPage() {
   const { toast } = useToast()
   const searchParams = useSearchParams()
   
-  if(searchParams.get("grabbed") === '1') {
+  let runToast = searchParams.get("grabbed") === '1'
+  
+  if(runToast) {
     toast({
       title: "I got your ip lmao gotem!! get a vpn scrub",
       description: "(for legal reasons this is a joke I forgor the tracker link)"
     })
+    runToast = false
   }
   
   return (
