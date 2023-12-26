@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
+import { Viewport } from 'next'
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -8,7 +9,6 @@ import { SiteHeader } from "@/components/ui/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
-import { Viewport } from 'next'
 
 export const metadata: Metadata = {
   title: {
@@ -47,7 +47,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <main>
               <div className="relative flex min-h-screen flex-col">
                 <SiteHeader />
-                <div className="flex-1">{children}</div>
+                <div className="flex-1 mt-[96px]">{children}</div>
               </div>
             </main>
             <TailwindIndicator />
