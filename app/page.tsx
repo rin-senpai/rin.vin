@@ -1,5 +1,8 @@
+"use client"
+
 import Link from "next/link"
 import Image from 'next/image'
+import { useSearchParams } from 'next/navigation'
 
 import { Gift, Apple, Github, Globe } from "lucide-react"
 
@@ -7,13 +10,23 @@ import { Button, buttonVariants } from "@/components/ui/button"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { useToast } from "@/components/ui/use-toast"
 
 export default function IndexPage() {
+  const { toast } = useToast()
+  const searchParams = useSearchParams()
+  
+  if(searchParams.get("grabbed") === '1') {
+    toast({
+      title: "I got your ip lmao gotem!! get a vpn scrub",
+      description: "(for legal reasons this is a joke I forgor the tracker link)"
+    })
+  }
+  
   return (
     <div>
       <section className="container grid max-w-[980px] items-center gap-6 pb-8 pt-6 md:py-10">
@@ -24,7 +37,7 @@ export default function IndexPage() {
                 High Quality Software... Unfinished
               </h1>
               <p className="text-center md:text-left max-w-[700px] text-lg text-muted-foreground">
-                I&apos;m a developer... I think... I hope
+                I&apos;m a developer... I think... I hope...
               </p>
             </div>
             <div className="flex gap-4">
@@ -35,7 +48,7 @@ export default function IndexPage() {
                 <Gift className="mr-2 h-4 w-4" /> Invest
               </Link>
               <Link
-                href="https://grabify.link/K11H21"
+                href="https://grabify.link/SEHP7N" // tracked at https://grabify.link/track/FI1N1L
                 className={buttonVariants({variant: "outline"})}
               >
                 Your IP
