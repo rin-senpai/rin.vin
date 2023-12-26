@@ -2,11 +2,12 @@
 
 import Link from "next/link"
 import Image from 'next/image'
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
+import React, { useEffect } from 'react'
 
 import { Gift, Apple, Github, Globe } from "lucide-react"
 
-import { Button, buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -17,18 +18,23 @@ import {
 import { useToast } from "@/components/ui/use-toast"
 
 export default function IndexPage() {
+  const router = useRouter()
+  
   const { toast } = useToast()
   const searchParams = useSearchParams()
   
-  let runToast = searchParams.get("grabbed") === '1'
-  
-  if(runToast) {
-    toast({
-      title: "I got your ip lmao gotem!! get a vpn scrub",
-      description: "(for legal reasons this is a joke I forgor the tracker link)"
-    })
-    runToast = false
-  }
+  useEffect(() => {
+    if(searchParams.get('grabbed') === '1') {
+      setTimeout(() => {
+        toast({
+          title: "I got your ip lmao gotem!! get a vpn scrub",
+          description: "(for legal reasons this is a joke I forgor the tracker link)"
+        })
+      }, 100)
+      router.push('/')
+    }
+    
+  }, [searchParams, toast, router])
   
   return (
     <div>
