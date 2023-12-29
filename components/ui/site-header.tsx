@@ -15,8 +15,8 @@ export function SiteHeader() {
   
   useEffect(() => {
     setPrevScrollpos(window.scrollY)
-    setTransition((0 <= prevScrollpos && prevScrollpos <= 96) ? 'none' : 'top 0.3s ease-in-out')
-  }, [prevScrollpos])
+    setTransition((0 <= prevScrollpos && prevScrollpos <= 96 && position === 'absolute') ? 'none' : 'top 0.3s ease-in-out')
+  }, [prevScrollpos, position])
   
   useEffect(() => {
     // Function to handle scroll events
@@ -26,7 +26,7 @@ export function SiteHeader() {
         setPosition('absolute')
       } else if (currentScrollPos === 96 && prevScrollpos > currentScrollPos) { // scrolling up
         setTop(0) // Show navbar
-      } else if (currentScrollPos === 96 && prevScrollpos < currentScrollPos) { // scrolling down
+      } else if (currentScrollPos === 96 && prevScrollpos < currentScrollPos && position == 'absolute') { // scrolling down
         setTop(-96) // Hide navbar
       } else if (currentScrollPos > 96) {
         setPosition('fixed')
@@ -44,7 +44,7 @@ export function SiteHeader() {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     };
-  }, [prevScrollpos]);
+  }, [prevScrollpos, position]);
   
   const positionStyles: CSSProperties = {
     top: `${top}px`,
