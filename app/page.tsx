@@ -170,7 +170,7 @@ export default function IndexPage() {
           </CardHeader>
           <CardContent>
             <p>
-              Created to encite passion into others with interesting projects, Koding Klub was a medium through which I could teach lower school students various programming concepts and applications. I wish it was called something different though...
+              Created to incite passion into others with interesting projects, Koding Klub was a medium through which I could teach lower school students various programming concepts and applications. I wish it was called something different though...
             </p>
           </CardContent>
           <CardFooter>
