@@ -76,7 +76,7 @@ export default function IndexPage() {
         </div>
       </section>
       <section className="container grid max-w-[980px] items-center gap-6 pb-8 pt-6 md:py-10">
-        <h2 className="text-center md:text-left text-xl font-extrabold leading-tight tracking-tighter md:text-3xl">
+        <h2 className="text-center md:text-left text-2xl font-extrabold leading-tight tracking-tighter md:text-3xl">
           My Stuff
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -160,8 +160,8 @@ export default function IndexPage() {
           </Card>
         </div>
       </section>
-      <section className="container grid max-w-[980px] items-center gap-6 pb-8 pt-6 md:py-10">
-        <h2 className="text-center md:text-left text-xl font-extrabold leading-tight tracking-tighter md:text-3xl">
+      <section className="container grid max-w-[980px] items-center gap-4 pb-8 pt-6 md:py-10">
+        <h2 className="text-center md:text-left text-2xl font-extrabold leading-tight tracking-tighter md:text-3xl">
           Roles and Positions
         </h2>
         <Card className="flex flex-col gap-2">
@@ -191,29 +191,68 @@ export default function IndexPage() {
           </CardFooter>
         </Card>
       </section>
-      <section className="container grid max-w-[980px] items-center gap-6 pb-8 pt-6 md:py-10">
-        <h2 className="text-center md:text-left text-xl font-extrabold leading-tight tracking-tighter md:text-3xl">
+      <section className="container grid max-w-[980px] items-center gap-4 pb-8 pt-6 md:py-10">
+        <h2 className="text-center md:text-left text-2xl font-extrabold leading-tight tracking-tighter md:text-3xl">
           Achievements
         </h2>
         <Card className="flex flex-col gap-2">
           <CardHeader>
-            <CardTitle>None</CardTitle>
+              <CardTitle>ATAR of 99.75</CardTitle>
           </CardHeader>
           <CardContent>
             <p>
-              yeah
+              Does anyone even care about this...
             </p>
           </CardContent>
           <CardFooter>
-            <p>2025</p>
+            <p>2023</p>
+          </CardFooter>
+        </Card>
+        <Card className="flex flex-col gap-2">
+          <CardHeader>
+              <CardTitle>Top of Computer Science ATAR at WSHS</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p>
+              Does this make me cool?
+            </p>
+          </CardContent>
+          <CardFooter>
+            <p>2022 - 2023</p>
+          </CardFooter>
+        </Card>
+        <Card className="flex flex-col gap-2">
+          <CardHeader>
+              <CardTitle>High Distinction in a Hecc Ton of Math Competitions</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p>
+              AMC and stuff but like I got so many that I&apos;ve lost count.
+            </p>
+          </CardContent>
+          <CardFooter>
+            <p>2018 - 2023</p>
+          </CardFooter>
+        </Card>
+        <Card className="flex flex-col gap-2">
+          <CardHeader>
+            <CardTitle>FTC First Place Winners</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p>
+              We were a team and we built and coded a cool robot and won wow.
+            </p>
+          </CardContent>
+          <CardFooter>
+            <p>2018</p>
           </CardFooter>
         </Card>
       </section>
-      <section className="container grid max-w-[980px] items-center gap-6 pb-8 pt-6 md:py-10">
-        <h2 className="text-center md:text-left text-xl font-extrabold leading-tight tracking-tighter md:text-3xl">
+      <section className="container grid max-w-[980px] items-center gap-6 pb-8 pt-6 md:py-10"> {/* FIX THIS WHOLE SECTION ON MOBILE!!! */}
+        <h2 className="text-center md:text-left text-2xl font-extrabold leading-tight tracking-tighter md:text-3xl">
           You Sound Unfathomably Based! Where Can I Find You?
         </h2>
-        <Card className="flex flex-col items-end bg-[url('/licc.gif')] aspect-square justify-end">
+        <Card className="flex flex-col items-end bg-[url('/licc.gif')] bg-contain aspect-square justify-end">
           <CardContent className="flex flex-col gap-4">
             <Link href="https://github.com/rin-senpai" className={buttonVariants({ variant: "black", size: "lg" })}>
               <Github className="mr-2 h-4 w-4" /> Github [<pre>rin-senpai</pre>]
