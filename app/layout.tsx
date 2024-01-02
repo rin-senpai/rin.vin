@@ -11,6 +11,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rin.vin"),
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
@@ -19,6 +20,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico"
   },
+  openGraph: {
+    images: "/fumorin.png"
+  }
 }
 
 export const viewport: Viewport = {
