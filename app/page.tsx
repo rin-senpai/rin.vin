@@ -94,7 +94,7 @@ export default function IndexPage() {
                   alt="Browoser chan"
                 />
                 <p>
-                  Funni browser app for Apple Watch built in Swift UI. AI soon!!
+                  Funni browser app for Apple Watch built in Swift UI. AI too now!!
                 </p>
               </CardContent>
             </div>
