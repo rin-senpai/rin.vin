@@ -51,7 +51,7 @@ export default function IndexPage() {
             </div>
             <div className="flex gap-4">
               <Link
-                href="https://ko-fi.com/voxeldev"
+                href="https://ko-fi.com/riniverse"
                 className={buttonVariants({variant: "default"})}
               >
                 <Gift className="mr-2 h-4 w-4" /> Invest
