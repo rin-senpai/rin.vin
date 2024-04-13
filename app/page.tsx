@@ -174,7 +174,7 @@ export default function IndexPage() {
             </p>
           </CardContent>
           <CardFooter>
-            <p>2022 - 2023</p>
+            <p>2024 - Present</p>
           </CardFooter>
         </Card>
         <Card className="flex flex-col gap-2">
