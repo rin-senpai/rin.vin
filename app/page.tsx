@@ -19,10 +19,10 @@ import { useToast } from "@/components/ui/use-toast"
 
 export default function IndexPage() {
   const router = useRouter()
-  
+
   const { toast } = useToast()
   const searchParams = useSearchParams()
-  
+
   useEffect(() => {
     if(searchParams.get('grabbed') === '1') {
       setTimeout(() => {
@@ -33,9 +33,9 @@ export default function IndexPage() {
       }, 100)
       router.push('/')
     }
-    
+
   }, [searchParams, toast, router])
-  
+
   return (
     <div>
       <section className="container grid max-w-[980px] items-center gap-6 pb-8 pt-6 md:py-10">
@@ -66,7 +66,7 @@ export default function IndexPage() {
           </div>
           <div className="flex gap-4 order-first md:order-last">
             <Image
-            className="rounded-full" 
+            className="rounded-full"
               src="/rin.png"
               width={256}
               height={256}
@@ -87,7 +87,7 @@ export default function IndexPage() {
               </CardHeader>
               <CardContent className="flex flex-col gap-4">
                 <Image
-                  className="rounded-2xl" 
+                  className="rounded-2xl"
                   src="/browoser.png"
                   width={256}
                   height={256}
@@ -114,7 +114,7 @@ export default function IndexPage() {
               </CardHeader>
               <CardContent className="flex flex-col gap-4">
                 <Image
-                  className="rounded-2xl" 
+                  className="rounded-2xl"
                   src="/koharu.png"
                   width={256}
                   height={256}
@@ -138,7 +138,7 @@ export default function IndexPage() {
             </CardHeader>
             <CardContent className="flex flex-col gap-4">
               <Image
-                    className="rounded-2xl" 
+                    className="rounded-2xl"
                     src="/rin.vin.png"
                     width={256}
                     height={256}
@@ -164,6 +164,19 @@ export default function IndexPage() {
         <h2 className="text-center md:text-left text-2xl font-extrabold leading-tight tracking-tighter md:text-3xl">
           Roles and Positions
         </h2>
+        <Card className="flex flex-col gap-2">
+          <CardHeader>
+            <CardTitle>AUNSW IT Subcom</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p>
+              I&apos;m the sole member of the Anime UNSW IT Subcommittee and code various solutions for the club. On track for director next year surely?
+            </p>
+          </CardContent>
+          <CardFooter>
+            <p>2022 - 2023</p>
+          </CardFooter>
+        </Card>
         <Card className="flex flex-col gap-2">
           <CardHeader>
             <CardTitle>WSHS Koding Klub Founder and Lead</CardTitle>
@@ -256,7 +269,7 @@ export default function IndexPage() {
           <CardContent className="flex flex-col gap-4">
             <Link href="https://github.com/rin-senpai" className={buttonVariants({ variant: "black", size: "lg" })}>
               <Github className="mr-2 h-4 w-4" /> Github [<pre>rin-senpai</pre>]
-            </Link>    
+            </Link>
             <Link href="https://discord.com/users/346948643523264532" className={buttonVariants({ variant: "black", size: "lg"})}>
               <Gamepad2 className="mr-2 h-4 w-4" /> Discord [<pre>kuru.rin</pre>]
             </Link>
