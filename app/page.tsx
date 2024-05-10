@@ -54,7 +54,7 @@ export default function IndexPage() {
                 href="https://ko-fi.com/riniverse"
                 className={buttonVariants({variant: "default"})}
               >
-                <Gift className="mr-2 h-4 w-4" /> Invest
+                <Gift className="mr-2 h-128 w-128" /> Invest
               </Link>
               <Link
                 href="https://grabify.link/SEHP7N" // tracked at https://grabify.link/track/FI1N1L
