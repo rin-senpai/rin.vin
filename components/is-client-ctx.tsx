@@ -1,4 +1,5 @@
 // Yoinked from https://stackoverflow.com/a/75692565/6335363
+"use client"
 import { createContext, useContext, useEffect, useState } from "react";
 
 const IsClientCtx = createContext(false);
