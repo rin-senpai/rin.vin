@@ -137,16 +137,12 @@ export default function IndexPage() {
               <CardTitle>rin.vin</CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col gap-4">
-              <Image
-                    className="rounded-2xl"
-                    src="/rin.vin.png"
-                    width={256}
-                    height={256}
-                    alt="rin.vin chan"
-                  />
-                <p>
-                  wait isn&apos;t that this???
-                </p>
+              <div className="frameWrap">
+                <iframe className="frame" src="https://rin.vin" title="Recursion" width={256} height={256}></iframe>
+              </div>
+              <p>
+                wait isn&apos;t that this???
+              </p>
             </CardContent>
             </div>
             <CardFooter className="flex flex-col gap-2">
