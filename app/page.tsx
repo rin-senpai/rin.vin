@@ -16,6 +16,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { useToast } from "@/components/ui/use-toast"
+import { useIsClient } from "@/components/is-client-ctx"
 
 export default function IndexPage() {
   const router = useRouter()
@@ -36,9 +37,11 @@ export default function IndexPage() {
 
   }, [searchParams, toast, router])
 
+  const isClient = useIsClient();
+
   // https://www.bryanbraun.com/2021/03/24/infinitely-nested-iframes/
   let recurseUrl = new URL('https://rin.vin');
-  if (typeof window !== 'undefined') {
+  if (isClient) {
     recurseUrl = new URL(window.location.toString());
   }
   recurseUrl.searchParams.set('count', (parseInt(searchParams.get('count') ?? '0') + 1).toString());
