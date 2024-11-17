@@ -41,10 +41,11 @@ export default function IndexPage() {
 
   // https://www.bryanbraun.com/2021/03/24/infinitely-nested-iframes/
   let recurseUrl = new URL('https://rin.vin');
+  const depth = parseInt(searchParams.get('depth') ?? '0');
   if (isClient) {
     recurseUrl = new URL(window.location.toString());
   }
-  recurseUrl.searchParams.set('count', (parseInt(searchParams.get('count') ?? '0') + 1).toString());
+  recurseUrl.searchParams.set('depth', (depth + 1).toString());
 
   return (
     <div>
@@ -147,9 +148,19 @@ export default function IndexPage() {
               <CardTitle>rin.vin</CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col gap-4">
-              <div className="frameWrap">
-                <iframe className="frame" src={recurseUrl.toString()} title="Recursion" width={256} height={256}></iframe>
-              </div>
+              {
+                depth >= 10
+                ? <Image
+                    className="rounded-2xl"
+                    src="/rin.vin.png"
+                    width={256}
+                    height={256}
+                    alt="rin.vin chan"
+                  />
+                : <div className="frameWrap">
+                    <iframe className="frame" src={recurseUrl.toString()} title="Recursion" width={1024} height={1024}></iframe>
+                  </div>
+              }
               <p>
                 wait isn&apos;t that this???
               </p>
