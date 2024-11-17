@@ -36,6 +36,10 @@ export default function IndexPage() {
 
   }, [searchParams, toast, router])
 
+  const recurseUrl = new URL(window.location.toString());
+  recurseUrl.searchParams.set('count', (parseInt(searchParams.get('count') ?? '0') + 1).toString());
+
+
   return (
     <div>
       <section className="container grid max-w-[980px] items-center gap-6 pb-8 pt-6 md:py-10">
@@ -138,7 +142,7 @@ export default function IndexPage() {
             </CardHeader>
             <CardContent className="flex flex-col gap-4">
               <div className="frameWrap">
-                <iframe className="frame" src="https://rin.vin" title="Recursion" width={256} height={256}></iframe>
+                <iframe className="frame" src={recurseUrl.toString()} title="Recursion" width={256} height={256}></iframe>
               </div>
               <p>
                 wait isn&apos;t that this???
