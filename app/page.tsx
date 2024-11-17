@@ -36,9 +36,12 @@ export default function IndexPage() {
 
   }, [searchParams, toast, router])
 
-  const recurseUrl = new URL(window.location.toString());
+  // https://www.bryanbraun.com/2021/03/24/infinitely-nested-iframes/
+  let recurseUrl = new URL('https://rin.vin');
+  if (typeof window !== 'undefined') {
+    recurseUrl = new URL(window.location.toString());
+  }
   recurseUrl.searchParams.set('count', (parseInt(searchParams.get('count') ?? '0') + 1).toString());
-
 
   return (
     <div>
