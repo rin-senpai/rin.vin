@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
+import * as React from "react";
+import Link from "next/link";
 
-import { NavItem } from "@/types/nav"
-import { siteConfig } from "@/config/site"
+import { NavItem } from "@/types/nav";
+import { siteConfig } from "@/config/site";
 
 import {
   NavigationMenu,
@@ -12,10 +12,10 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
 
 interface MainNavProps {
-  items?: NavItem[]
+  items?: NavItem[];
 }
 
 export function MainNav({ items }: MainNavProps) {
@@ -31,21 +31,19 @@ export function MainNav({ items }: MainNavProps) {
               (item, index) =>
                 item.href && (
                   <NavigationMenuItem key={index}>
-                    <Link
-                      href={item.href}
-                      legacyBehavior
-                      passHref
-                    >
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    <Link href={item.href} legacyBehavior passHref>
+                      <NavigationMenuLink
+                        className={navigationMenuTriggerStyle()}
+                      >
                         {item.title}
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
-                )
+                ),
             )}
           </NavigationMenuList>
         </NavigationMenu>
       ) : null}
     </div>
-  )
+  );
 }
