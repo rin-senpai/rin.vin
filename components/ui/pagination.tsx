@@ -1,5 +1,4 @@
 import * as React from "react";
-rt * as React from "react";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
